@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-200;
+    cursor: none;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 transition-colors;
+  }
+
+  .mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors;
+  }
+
+  .social-link {
+    @apply p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-purple-100 dark:hover:bg-purple-900 transition-colors;
+  }
+
+  .gradient-hover {
+    @apply relative;
+  }
+
+  .gradient-hover::after {
+    @apply content-[''] absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300
+           bg-gradient-to-r from-purple-600/20 to-pink-600/20;
+  }
+
+  .gradient-hover:hover::after {
+    @apply opacity-100;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600;
+}
+
+/* Gradient animation on hover for buttons and links */
+.hover-gradient {
+  background-size: 200% 200%;
+  background-image: linear-gradient(45deg, theme('colors.purple.600'), theme('colors.pink.600'), theme('colors.purple.600'));
+  transition: all 0.3s ease;
+}
+
+.hover-gradient:hover {
+  background-position: 100% 100%;
+  transform: translateY(-2px);
+}
