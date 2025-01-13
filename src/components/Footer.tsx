@@ -65,7 +65,7 @@ export const Footer = () => {
         
         <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 text-center text-gray-600 dark:text-gray-300">
           <p className="flex items-center justify-center">
-            Made with <Heart size={16} className="mx-2 text-red-500" /> by [Ck]
+            Made with <Heart size={16} className="mx-2 text-red-500" /> by Ck
           </p>
         </div>
       </div>
